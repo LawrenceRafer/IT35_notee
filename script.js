@@ -1,5 +1,5 @@
-// Hardcoded Admin Account
-const adminUsername = "admin";
+
+const adminUsername = "rafer";
 const adminPassword = "1234";
 
 function login() {

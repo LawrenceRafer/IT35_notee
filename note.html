@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Admin Note App</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background: #f4f6f9;
+        }
+
+        input, textarea {
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .note {
+            background: #ffffff;
+            padding: 10px;
+            margin: 10px auto;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body onload="checkLogin()">
+
+    <!-- LOGIN SECTION -->
+    <div id="loginSection">
+        <h2>Admin Login</h2>
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <p id="loginMessage" style="color:red;"></p>
+    </div>
+
+    <!-- NOTE SECTION -->
+    <div id="noteSection" style="display:none;">
+        <h2>Admin Notes</h2>
+        <textarea id="noteInput" placeholder="Write a note..."></textarea><br>
+        <button onclick="addNote()">Add Note</button>
+        <button onclick="logout()">Logout</button>
+
+        <div id="notesContainer"></div>
+    </div>
+
+    <!-- CONNECT JS FILE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
